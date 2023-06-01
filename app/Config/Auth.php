@@ -35,10 +35,14 @@ class Auth extends \Myth\Auth\Config\Auth
 	 * @var array
 	 */
 	public $views = [
-		'login'		      => 'Modules\Auth\auth_login',
-		'register'		  => 'Modules\Auth\auth_register',
-		'forgot'		  => 'Modules\Auth\auth_forgot',
-		'reset'		      => 'Modules\Auth\auth_reset',
+		// 'login'		      => 'Modules\Auth\auth_login',
+		// 'register'		  => 'Modules\Auth\auth_register',
+		// 'forgot'		  => 'Modules\Auth\auth_forgot',
+		// 'reset'		      => 'Modules\Auth\auth_reset',
+		'login'           => 'Myth\Auth\Views\login',
+		'register'        => 'Myth\Auth\Views\register',
+		'forgot'          => 'Myth\Auth\Views\forgot',
+		'reset'           => 'Myth\Auth\Views\reset',
 		'emailForgot'	  => 'Myth\Auth\Views\emails\forgot',
 		'emailActivation' => 'Myth\Auth\Views\emails\activation',
 	];
@@ -50,7 +54,8 @@ class Auth extends \Myth\Auth\Config\Auth
 	 *
 	 * @var string
 	 */
-	public $viewLayout = 'Modules\Core\bare';
+	//public $viewLayout = 'Modules\Core\bare'; 
+	public $viewLayout = 'Myth\Auth\Views\layout';
 
 	/**
 	 * --------------------------------------------------------------------
@@ -147,7 +152,8 @@ class Auth extends \Myth\Auth\Config\Auth
 	 *
 	 * @var string|null Name of the ActivatorInterface class
 	 */
-	public $requireActivation = 'Myth\Auth\Authentication\Activators\EmailActivator';
+	//public $requireActivation = 'Myth\Auth\Authentication\Activators\EmailActivator';
+	public $requireActivation = null;
 
 	/**
 	 * --------------------------------------------------------------------
